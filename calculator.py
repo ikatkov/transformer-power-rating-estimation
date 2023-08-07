@@ -33,11 +33,16 @@ ax2.scatter(x_values, y_values, marker='o', color='blue', label='Data')
 ax2.plot(x_values, quadratic_curve, color='red', label='Quadratic Curve')
 ax2.set_xlabel('Weight, kg')
 ax2.set_ylabel('Power, W')
-ax2.set_title('Zoomed to 2 kg max')
-ax2.set_xlim(0, 2)  # Zoom to 2 kg max
+ax2.set_title('Zoomed to 1 kg max')
+ax2.set_xlim(0, 1)  # Zoom to 2 kg max
+ax2.set_ylim(0, 75)  # Zoom to 2 kg max
 ax2.legend()
 ax2.grid(True)
 
 # Adjust layout and display the plots
 plt.tight_layout()
+
+# Save the figure to an image file
+plt.savefig('transformer_power_plot.png')
+
 plt.show()

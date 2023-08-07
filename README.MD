@@ -11,7 +11,7 @@
 * If it's below 105C you can draw more power
 * Repeat until satisfied
 
-<img src="chart.png">
+<img src="transformer_power_plot.png">
 
 
 # Source
