@@ -15,7 +15,6 @@ y_values = np.array([point[1] for point in data])
 coefficients = np.polyfit(x_values, y_values, 2)
 quadratic_curve = coefficients[0] * x_values**2 + coefficients[1] * x_values + coefficients[2]
 
-
 # Create a figure with two subplots
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 12))
 
@@ -45,4 +44,10 @@ plt.tight_layout()
 # Save the figure to an image file
 plt.savefig('transformer_power_plot.png')
 
-plt.show()
+# plt.show()
+
+
+# Example usage of the function
+weight_to_check = 0.4 # Replace with the weight you want to check
+power_value = np.poly1d(coefficients)(weight_to_check)
+print(f"Power value for weight {weight_to_check} kg: {power_value:.2f} W")
